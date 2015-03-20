@@ -9,7 +9,7 @@ typedef long long ll;
 vector <ll> arDataTable;
 vector <ll> arMultipleIndexTree;
 ll n, k;
-char cOrder;
+char cOrder[1];
 ll a, b;
 ll nBottom;
 ll mul;
@@ -77,7 +77,7 @@ int main()
 
 		arDataTable.clear();
 		arMultipleIndexTree.clear();
-		
+
 		arDataTable.resize(nBottom, 1);
 		arMultipleIndexTree.resize(nBottom * 2, 1);
 
@@ -88,26 +88,16 @@ int main()
 
 		while (k--)
 		{
-			getchar();
-			scanf("%c", &cOrder);
+			scanf("%s", cOrder);
 			scanf("%lld", &a);
 			scanf("%lld", &b);
 
-			cout << cOrder << " " << a << " " << b << endl;
-
-			if (cOrder == 'C')
+			if (cOrder[0] == 'C')
 			{
 				a = a + nBottom - 1;
 				updateData(a, b);
-
-				//cout << endl;
-				//for (int i = 1; i < nBottom * 2; i++)
-				//{
-				//	cout << arMultipleIndexTree[i] << " ";
-				//}
-				
 			}
-			else if (cOrder == 'P')
+			else if (cOrder[0] == 'P')
 			{
 				a = a + nBottom - 1;
 				b = b + nBottom - 1;
@@ -119,7 +109,6 @@ int main()
 					printf("-");
 				else
 					printf("0");
-				cout << endl;
 			}
 		}
 		printf("\n");
