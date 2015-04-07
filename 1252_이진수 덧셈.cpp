@@ -2,8 +2,6 @@
 #include <cstdio>
 #include <vector>
 #include <algorithm>
-#include <cstring>
-#include <string>
 using namespace std;
 
 int main()
@@ -11,4 +9,9 @@ int main()
 #ifdef _CONSOLE
 	freopen("input.txt", "r", stdin);
 #endif
+
+	int nBinaryData1 = 0;
+	int nBinaryData2 = 0;
+
+	scanf
 }

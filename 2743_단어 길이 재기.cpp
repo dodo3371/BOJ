@@ -3,7 +3,6 @@
 #include <vector>
 #include <algorithm>
 #include <cstring>
-#include <string>
 using namespace std;
 
 int main()
@@ -11,4 +10,10 @@ int main()
 #ifdef _CONSOLE
 	freopen("input.txt", "r", stdin);
 #endif
+
+	char arWord[100] = {};
+
+	cin >> arWord;
+
+	cout << strlen(arWord) << endl;
 }
