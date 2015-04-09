@@ -4,7 +4,6 @@
 #include <algorithm>
 #include <cstring>
 #include <string>
-#include <cmath>
 using namespace std;
 
 int main()
@@ -14,18 +13,22 @@ int main()
 #endif
 
 	int nTestcase = 0;
-	int nNum = 0;
-	vector <double> arData(pow(10, 7) + 1);
-
-	arData[1] = log10(1);
-	for (int i = 2; i <= pow(10, 7); i++)
-		arData[i] = arData[i - 1] + log10(i);
+	int r, e, c;
 
 	scanf("%d", &nTestcase);
 
 	while (nTestcase--)
 	{
-		scanf("%d", &nNum);
-		printf("%d\n", (int)arData[nNum] + 1);
+		scanf("%d", &r);
+		scanf("%d", &e);
+		scanf("%d", &c);
+
+		if (r < e - c)
+			printf("advertise\n");
+		else if (r == e - c)
+			printf("does not matter\n");
+		else
+			printf("do not advertise\n");
+
 	}
 }
