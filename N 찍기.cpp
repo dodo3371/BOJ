@@ -5,6 +5,7 @@
 #include <cstring>
 using namespace std;
 
+//test ¡÷ºÆ
 int main()
 {
 #ifdef _CONSOLE
